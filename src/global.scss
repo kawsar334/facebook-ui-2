@@ -1,4 +1,15 @@
+
+
 $mainColor:#1877f2;
 $white:#ffff;
 $gray:#555;
  $crimson:crimson;
+
+
+
+ $width:778px;
+ @mixin mobile{
+    @media (max-width:#{$width}){
+        @content 
+    }
+ }

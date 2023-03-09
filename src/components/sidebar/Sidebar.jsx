@@ -1,8 +1,15 @@
+import { useState } from "react";
 import "./sidebar.scss";
 
 const Sidebar = () => {
+  const [open, setOpen] = useState(true);
+
+
   return (
-      <div className="sidebar">
+    <>
+
+      <i className="fa-solid fa-bars" onClick={()=>setOpen(!open)}></i>
+      {open &&<div className="sidebar">
         <div className="sidebarWrapper">
             <ul className="sidebarList">
               <li className="sidebarListItem">
@@ -63,7 +70,8 @@ const Sidebar = () => {
           </li>
             </ul>
         </div>
-      </div>
+      </div>}
+    </>
   )
 }
 

@@ -11,11 +11,19 @@
     position: sticky;
     top: 0;
     z-index: 999;
+   @include mobile{
+    height: max-content;
+    flex-direction: column;
+    padding: 20px 0px 10px 0px;
+   }
 
     // ==================================TOP LEFT START ==================================================================
     .topbarLeft{
 
         flex: 3;
+        @include mobile{
+            display: none;
+        }
         .logo{
             font-size: 24px;
             color: $white;

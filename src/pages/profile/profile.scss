@@ -1,7 +1,11 @@
+@import "../../global.scss";
+
+
 .profile{
     display: flex;
     .profileRight{
         flex: 9;
+      
         .profileRightTop{
             .coverpic{
                 width: 100%;
@@ -47,13 +51,14 @@
     // ============
     .userInformation{
         flex: 3;
-        // margin-top: 30px;
         padding: 10px 30px;
-        // background-color: red;
         position: sticky;
         right: 0;
         top: 50px;
         height: calc(50px - 100vh );
+        @include mobile {
+                display: none;
+            }
         ::-webkit-scrollbar{
             display: none;
         }

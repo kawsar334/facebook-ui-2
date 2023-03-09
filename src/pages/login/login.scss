@@ -14,10 +14,14 @@
         justify-content: center;
         align-items: center;
         gap: 10px;
+        @include mobile {
+                flex-direction: column-reverse;
+            }
         .loginLeft{
             flex: 1;
             // background-color: rgb(234, 241, 241);
             padding: 10px 20px;
+           
             .loginHeader{
                 color: $mainColor;
                 padding: 20px;
@@ -40,6 +44,9 @@
             padding: 30px 10px;
             border-radius: 5px;
             // box-shadow: 0 0 1px 3px rgba(0,0,0,0.1);
+            @include mobile {
+                    width: 300px;
+                }
             .loginForm{
                 width: 100%;
                 display: flex;

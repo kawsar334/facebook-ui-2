@@ -8,9 +8,26 @@
     position:sticky;
     top: 50px;
     left: 0;
+    transition: 2s all ease;
+  
+    @include mobile{
+        position: fixed;
+        top: 100px;
+        width: 170px;
+        height: max-content;
+        overflow: auto;
+        z-index: 999;
+
+    }
 
 .sidebarWrapper{
     padding: 20px;
+    transition: 2s all ease;
+    @include mobile{
+        margin-top:0px;
+        // display: none;
+        background-color: white;
+    }
 }
 .sidebarList{
     padding: 0;
@@ -75,3 +92,22 @@
     border-radius: 10px;
     background-color: $gray;
 }
+  .fa-bars {
+     
+      font-size: 30px;
+      background-color: transparent;
+      height: max-content;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 999;
+      position: fixed;
+      top: 55px;
+    transition: 2s all ease;
+    display: none;
+    @include mobile{
+        display: block;
+
+    }
+      
+
+  }
